@@ -154,15 +154,38 @@ $(function() {
           <div class="col-md-4">
             <div class="info">
               <div class="thumb circle-small-thumb info-img"></div>
-              <strong>IDADE</strong>
-              <span><%= @politician.age %></span>
+              <strong>ESTADO</strong>
+              <span><%= @politician.state %></span>
             </div>
           </div>
           <div class="col-md-4">
             <div class="info">
               <div class="thumb circle-small-thumb info-img"></div>
-              <strong>CPF</strong>
-              <span><%= @politician.cpf %></span>
+              <strong>Título</strong>
+              <span><%= @politician.title %></span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info">
+              <div class="thumb circle-small-thumb info-img"></div>
+              <strong>CASA</strong>
+              <span><%= @politician.house %></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="info">
+              <div class="thumb circle-small-thumb info-img"></div>
+              <strong>CARGOS PASSADOS</strong>
+              <span><%= @politician.past_jobs %></span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info">
+              <div class="thumb circle-small-thumb info-img"></div>
+              <strong>PARTIDOS PASSADOS</strong>
+              <span><%= @politician.past_parties %></span>
             </div>
           </div>
         </div>
