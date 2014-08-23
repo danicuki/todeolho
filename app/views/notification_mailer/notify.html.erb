@@ -363,7 +363,7 @@
 		}
 		body,table.body,h1,h2,h3,h4,h5,h6,p,td{
 			color:#333333;
-			font-family:"Helvetica", "Arial", sans-serif;
+			font-family:"Trebuchet", "Arial", sans-serif;
 			font-size:14px;
 			font-weight:normal;
 			padding:0;
@@ -472,7 +472,7 @@
 		table.button td a,table.tiny-button td a,table.small-button td a,table.medium-button td a,table.large-button td a{
 			font-weight:bold;
 			text-decoration:none;
-			font-family:Helvetica, Arial, sans-serif;
+			font-family:"Trebuchet", Arial, sans-serif;
 			color:#ffffff;
 			font-size:16px;
 		}
@@ -776,7 +776,7 @@
                                 <%= t("wr_preheader1") %>
                               </td>
                               <td class="five sub-columns last" align="right" style="font-size:11px;line-height:1.2; text-align:right; padding-bottom:0;" mc:edit="preheader_content01">
-                              <a href="http://www.todeolho.com.br/analytics?utm_source=weekly_report&utm_medium=email&utm_campaign=view_browser" target="_blank"><%= t("wr_preheader2") %></a>.
+                              <a href="http://www.todeolho.org.br/analytics?utm_source=weekly_report&utm_medium=email&utm_campaign=view_browser" target="_blank"><%= t("wr_preheader2") %></a>.
                               </td>
                               <td class="expander"></td>
 
@@ -802,7 +802,7 @@
                     <tr>
 
                       <td class="six sub-columns" id="headerImage">
-                        <img src="logo.png" width="200" height="43">
+                        <%= image_tag "logo.png"%><!-- <img src="logo.png" width="200" height="43"> -->
                       </td>
 
                       <td class="six sub-columns last" id="headerText" align="right" style="font-size:11px; color: #c1c1c1;text-transform: uppercase;text-align:right; vertical-align:middle;">
@@ -834,7 +834,10 @@
                             <td>
                               <h5>Olá <span style="color:#1da5d6" mc:edit="username"><%= @user.name %></span>,</h5>
                               <p class="lead welcome_txt" id="welcome_txt">
-                                	<%= t("invmail_welcometxt2") %>
+                                	Temos uma novidade sobre <%= @notification.politician.name.titleize %>
+                              </p>
+                              <p class="lead welcome_txt" id="welcome_txt">
+                                	<%= @notification.message %>
                               </p>
                             </td>
                             <td class="expander"></td>
@@ -844,182 +847,18 @@
                     </tr>
                   </table>
                   <!-- end welcome // -->
-                  
-                  <table class="row">
-                    <tr>
-                      <td class="wrapper last">
-                        <table class="twelve columns">
-                          <tr>
-                            <td class="executions-title" style="color:#999;font-size:12px;text-transform:uppercase;text-align:center!important;">
-                            	PERIODO
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                  
-                  
-
-                  <!-- begin stats // -->
-                  <table class="row main-stats">
-                    <tr>
-
-                      <!-- radio stats -->
-                      <td class="wrapper">
-
-                        <table class="three columns">
-                          <tr>
-                            <td class="panel panel-stats">
-                              <img src="img1.png" width="43" heigth="43" alt="Radio" style="margin-right:2px;max-width:43px;margin-top:-1px">
-                              <table>
-                                <tr>
-                                  <td style="font-size:24px; color:#1da5d6; line-height:1; padding:0!important;" mc:edit="radiostats">
-                                  	123
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td style="font-size:10px; color:#999; text-transform:uppercase;"><%= t("radio") %></td>
-                                </tr>
-                              </table>
-                            </td>
-                            <td class="expander"></td>
-                          </tr>
-                        </table>
-                      </td>
-                      <td class="hidden-xs" style="width:1px;background-color:#eee;margin:0 5px;"></td>
-
-                      <!-- tv stats -->
-                      <td class="wrapper">
-                        <table class="three columns">
-                          <tr>
-                            <td class="panel panel-stats">
-                              <img src="img2.png" width="50" height="50" alt="TV" style="float:left; margin-right:2px;margin-top:-6px;">
-                              <table>
-                                <tr>
-                                  <td style="font-size:24px; color:#1da5d6; line-height:1; padding:0!important;" mc:edit="tvstats">
-									123
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td style="font-size:10px; color:#999; text-transform:uppercase;"><%= t("tv") %></td>
-                                </tr>
-                              </table>
-                            </td>
-                            <td class="expander"></td>
-                          </tr>
-                        </table>
-                      </td>
-                      <td class="hidden-xs" style="width:1px;background-color:#eee;margin:0 5px;"></td>
-
-                      <!-- web stats -->
-                      <td class="wrapper">
-                        <table class="three columns">
-                          <tr>
-                            <td class="panel panel-stats">
-                              <img src="http://gallery.mailchimp.com/fe555de19ff881b743188a5f4/images/c72e107d-9f50-45c9-aa30-523afda2b596.png" width="50" height="50" alt="Websites" style="margin-right:3px;max-width:50px;margin-top:-4px;">
-                              <table>
-                                <tr>
-                                  <td style="font-size:24px; color:#1da5d6; line-height:1; padding:0!important;" mc:edit="websitestats">
-									123
-                                </td>
-                                </tr>
-                                <tr>
-                                  <td style="font-size:10px; color:#999; text-transform:uppercase;"><%= t("websites") %></td>
-                                </tr>
-                              </table>
-                            </td>
-                            <td class="expander"></td>
-                          </tr>
-                        </table>
-                      </td>
-                      <td class="hidden-xs" style="width:1px;background-color:#eee;margin:0 5px;"></td>
-
-                      <td class="wrapper last">
-                        <table class="three columns">
-                          <tr>
-                            <td class="panel">
-                              <img src="http://gallery.mailchimp.com/fe555de19ff881b743188a5f4/images/0e028658-30c3-499c-8d7b-5db6e243fd75.png" width="47" height="47" alt="Webradios" style="margin-right:2px;max-width:47px;margin-top:-3px;">
-                              <table>
-                                <tr>
-                                  <td style="font-size:24px; color:#1da5d6; line-height:1; padding:0!important;" mc:edit="webradiostats">
-                                  	123
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td style="font-size:10px; color:#999; text-transform:uppercase;"><%= t("webradios") %></td>
-                                </tr>
-                              </table>
-                            </td>
-                            <td class="expander"></td>
-                          </tr>
-                        </table>
-                      </td>
-
-                    </tr>
-                  </table>
 
                   <br>
 
                   <table class="medium-button btn-ax">
                     <tr>
                       <td>
-                        <a class="call_to_action" href="http://www.todeolho.com.br/analytics?utm_source=weekly_report&utm_medium=email&utm_campaign=full_report" mc:edit="linkfullreport">
-                          <%= t("mail_fullreport") %>
-                        </a>
+                      	<%= link_to "Veja mais detalhes", @notification.politician, class: "call_to_action" %>
                       </td>
                     </tr>
                   </table>
                   <!-- end call-to-action // -->
                   <br><br>
-
-                  <!-- begin table top // -->
-                  <table class="container">
-                    <tr>
-                      <td>
-                        <h5 style="color:#1da5d6!important"><%= t("mail_topsongs") %></h5>
-                        <table id="table-list" style="min-width:100%">
-                          <tr>
-                          	<th style="width:20%; white-space: nowrap;"><%= t("audio_source") %></th>
-                            <th style="width:50%;white-space: nowrap;"><%= t("song") %></th>
-                            <th style="width:15%;white-space: nowrap;"><%= t("plays") %></th>
-                            <th class="hidden-xs"><%= t("royalties") %></th>
-                          </tr>
-                              <tr>
-                              	<td><span style="font-size:11px; color:#1da5d6; background-color:#eee; padding:5px;white-space: nowrap;">Titulo</span></td>
-                                <td>Nome</td>
-                                <td>Plays</td>
-                                <td class="hidden-xs">$$$</td>
-                              </tr>
-                        </table>
-                        <br>
-                      </td>
-                    </tr>
-                  </table>
-
-                  <table class="row">
-                    <tr>
-                      <td class="wrapper last">
-                        <table class="twelve columns">
-                          <tr>
-                            <td>
-                            	<a href="http://www.todeolho.com.br/analytics?utm_source=weekly_report&utm_medium=email&utm_campaign=all_songs" mc:edit="tslink" style="float:right;text-decoration:underline;">
-                            		<%= t("mail_seeall") %> <%= t("songs") %></a>
-                            </td>
-                            <td class="expander"></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                  <!-- end table top // -->
-
-                  <br>
-                  
-
-                  <!-- end table top locations // -->
-                  
-                  <br>
 
                   <!-- begin about // -->
                   <table class="row">
@@ -1029,17 +868,11 @@
                         <table class="twelve columns">
                           <tr>
                             <td>
-                              <h5 style="color:#1da5d6;"><%= t("invmail_abouthead") %></h5>
                               <p class="about">
-                                <%= t("invmail_abouttxtp1") %><br>
-                                <br>
-                                <%= t("invmail_abouttxtp2") %><br>
-                                <br>
-                                <%= t("invmail_abouttxtp3") %><br>
-                                <%= t("mail_bye") %>,<br>
-                                <br>
-                                Tô DE OLHO<br>
-                                <a href="http://todeolho.com.br">http://todeolho.com.br</a>
+
+                              	<br>
+                                TÔ DE OLHO<br>
+                                <a href="http://todeolho.org.br">http://todeolho.org.br</a>
                               </p>
                             </td>
                             <td class="expander"></td>
@@ -1088,7 +921,7 @@
                               <table class="tiny-button success">
                                 <tr>
                                   <td>
-                                    <a href="http://www.todeolho.com.br/partners?utm_source=weekly_report&utm_medium=email&utm_campaign=invite_friend" style="text-transform:uppercase;"><%= t("mail_sent2friend") %></a>
+                                    <a href="http://www.todeolho.org.br/partners?utm_source=weekly_report&utm_medium=email&utm_campaign=invite_friend" style="text-transform:uppercase;">Enviar para um amigo</a>
                                   </td>
                                 </tr>
                               </table>

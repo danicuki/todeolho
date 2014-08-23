@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20140823172535) do
     t.datetime "updated_at"
   end
 
-  add_index "notifications", ["politician_id"], name: "index_notifications_on_politician_id"
+  add_index "notifications", ["politician_id"], name: "index_notifications_on_politician_id", using: :btree
 
   create_table "politicians", force: true do |t|
     t.string   "api_id"
@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(version: 20140823172535) do
     t.integer "politician_id"
   end
 
-  add_index "politicians_users", ["politician_id"], name: "index_politicians_users_on_politician_id"
-  add_index "politicians_users", ["user_id"], name: "index_politicians_users_on_user_id"
+  add_index "politicians_users", ["politician_id"], name: "index_politicians_users_on_politician_id", using: :btree
+  add_index "politicians_users", ["user_id"], name: "index_politicians_users_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"

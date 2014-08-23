@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+  wr_subject: "Relatório Semanal Playax"
+  wr_subject_spam: "Onde sua música está tocando"
+
+  wr_preheader1: "Tô de olho: novidades sobre o político."
+  wr_preheader2: "Veja no browser"
+  wr_header_slogan: "TÔ DE OLHO"
