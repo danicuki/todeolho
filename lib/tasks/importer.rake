@@ -9,7 +9,7 @@ namespace :importer do
     end
     politicians = JSON.parse(c.body_str, symbolize_names: true)
     politicians.each do |politician|
-      Politician.create! name: politician[:nome], api_id: politician[:id]
+      Politician.create! name: politician[:apelido], api_id: politician[:id]
     end
   end
 end
