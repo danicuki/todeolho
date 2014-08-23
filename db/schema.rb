@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(version: 20140823172535) do
     t.integer "politician_id"
   end
 
-  add_index "politicians_users", ["politician_id"], name: "index_politicians_users_on_politician_id", using: :btree
-  add_index "politicians_users", ["user_id"], name: "index_politicians_users_on_user_id", using: :btree
+  add_index "politicians_users", ["politician_id"], name: "index_politicians_users_on_politician_id"
+  add_index "politicians_users", ["user_id"], name: "index_politicians_users_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
