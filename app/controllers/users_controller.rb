@@ -49,7 +49,7 @@ class UsersController < ApplicationController
     @client.account.calls.create({
       :to => user.phone, 
       :from => '+12677513853', 
-      :url => "http://todeolho.herokuapp.com/call.xml?user_id=#{user.id}&#38;notification_id=#{notification.id}",  
+      :url => "http://todeolho.herokuapp.com/call.xml?user_id=#{user.id}&amp;notification_id=#{notification.id}",  
       :method => 'GET',  
       :fallback_method => 'GET',  
       :status_callback_method => 'GET',    
