@@ -25,7 +25,21 @@ Rails.application.configure do
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
-
+  # Don't care if the mailer can't send.
+  config.action_mailer.default_url_options = { :host => 'todeolho.org.br' }
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+  
+  config.action_mailer.smtp_settings = {
+    :address   => "smtp.mandrillapp.com",
+    :port      => 587,
+    :enable_starttls_auto => true,
+    :user_name => 'danicuki@gmail.com',
+    :password  => 'RD8_gjhBZPla-BgnWohVcg'
+  }
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
