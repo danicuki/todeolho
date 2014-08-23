@@ -20,6 +20,13 @@ namespace :importer do
       p.age = ""
       p.cpf = politician[:CPF]
       p.bio = politician[:miniBio]
+      p.house = politician[:casa]
+      p.state = politician[:estado]
+      p.title = politician[:titulo]
+      p.past_jobs = politician[:cargosPassados]
+      p.past_parties = politician[:partidosPassados]
+
+
 
       begin
       uri = I18n.transliterate(politician[:apelido].downcase.gsub(" ",""))

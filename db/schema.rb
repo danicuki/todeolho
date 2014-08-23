@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823182741) do
+ActiveRecord::Schema.define(version: 20140823194858) do
 
   create_table "notifications", force: true do |t|
     t.integer  "politician_id"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20140823182741) do
     t.datetime "updated_at"
   end
 
-  add_index "notifications", ["politician_id"], name: "index_notifications_on_politician_id"
+  add_index "notifications", ["politician_id"], name: "index_notifications_on_politician_id", using: :btree
 
   create_table "politicians", force: true do |t|
     t.string   "api_id"
@@ -32,21 +32,28 @@ ActiveRecord::Schema.define(version: 20140823182741) do
     t.string   "nickname"
     t.string   "party"
     t.text     "bio"
-    t.text     "job_title",        limit: 255
+    t.text     "job_title"
     t.string   "candidate_number"
     t.string   "candidate_title"
     t.string   "age"
     t.string   "cpf"
     t.string   "scholarity"
+    t.string   "house"
+    t.string   "state"
+    t.string   "title"
+    t.text     "past_jobs"
+    t.text     "past_parties"
   end
+
+  add_index "politicians", ["api_id"], name: "api_id", unique: true, using: :btree
 
   create_table "politicians_users", force: true do |t|
     t.integer "user_id"
     t.integer "politician_id"
   end
 
-  add_index "politicians_users", ["politician_id"], name: "index_politicians_users_on_politician_id"
-  add_index "politicians_users", ["user_id"], name: "index_politicians_users_on_user_id"
+  add_index "politicians_users", ["politician_id"], name: "index_politicians_users_on_politician_id", using: :btree
+  add_index "politicians_users", ["user_id"], name: "index_politicians_users_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
