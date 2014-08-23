@@ -37,7 +37,7 @@ $(function() {
         dropdownCssClass: "bigdrop", // apply css that makes the dropdown taller
         escapeMarkup: function (m) { return m; } // we do not want to escape markup since we are displaying html in results
       });
-      
+
       $('#notifications-button').click(function() {
         $('.active').removeClass();
         $(this).closest('li').addClass('active');
@@ -80,18 +80,12 @@ $(function() {
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        <div class="thumb circle-medium-thumb" id="politician-photo" style="background-image:url(<%= @politician.image %>);background-position:center"></div>
-        <div id="social-icons">
-          <i class="fa fa-twitter"></i>
-          <i class="fa fa-facebook-square"></i>
-          <i class="fa fa-globe"></i>
-        </div>
-        <h2><%= @politician.nickname %></h2>
-        <p><%= @politician.party %></p>
+        <%= render 'politician' %>
         <hr/>
         <p><%= @politician.bio %></p>
+        <br>
         <label class='col-sm-2'></label>
-        <button class="btn btn-default col-sm-8" id="follow" data-toggle="modal" data-target="#follow-subscribe">FIQUE DE OLHO</button>
+        <button class="btn btn-default col-sm-8" id="follow" data-toggle="modal" data-target="#follow-subscribe">Fique de Olho</button>
         <div class="col-sm-2"></div>
       </div>
       <div class="col-md-2"></div>
@@ -109,45 +103,23 @@ $(function() {
       </ul>
       <div id="notifications-section">
         <div class="row">
-          <div class="col-md-6">
-            
-            <div class="dialog">
-              <div class="thumb small-thumb dialog-img"></div>  
-              <div class="dialog-box">
-                <h4>Projeto</h4>
-                <span>23/08/2014 - 13:00</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consectetur, iusto ratione sunt, consequuntur beatae!</p>
-              </div>
-            </div>
-            
-            <div class="dialog">
-              <div class="thumb small-thumb dialog-img"></div>  
-              <div class="dialog-box">
-                <h4>Patrimônio</h4>
-                <span>23/08/2014 - 13:00</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consectetur, iusto ratione sunt, consequuntur beatae!</p>
-              </div>
-            </div>
-          </div>
+        <% @notifications.each do |notification| %>
           <div class="col-md-6">
             <div class="dialog">
-              <div class="thumb small-thumb dialog-img"></div>  
+              <div class="thumb small-thumb dialog-img"></div>
               <div class="dialog-box">
-                <h4>Processo</h4>
-                <span>23/08/2014 - 13:00</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consectetur, iusto ratione sunt, consequuntur beatae!</p>
+                <h4><%= notification.category %></h4>
+                <span><%= time_ago_in_words notification.created_at %></span>
+                <p><%=
+
+raw(
+notification.message
+
+)                 %></p>
               </div>
             </div>
-            <div class="dialog">
-              <div class="thumb small-thumb dialog-img"></div>  
-              <div class="dialog-box">
-                <h4>Bio</h4>
-                <span>23/08/2014 - 13:00</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consectetur, iusto ratione sunt, consequuntur beatae!</p>
-              </div>
-            </div>
-          </div>
-        </div>
+         </div>
+         <% end %>
       </div>
       <div id="infos-section">
         <div class="row">
@@ -204,27 +176,25 @@ $(function() {
     <div class="modal-content">
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h3>FIQUE DE OLHO EM:</h3>
-        <div class="thumb circle-medium-thumb" id="politician-photo" style="background-image:url(<%= @politician.image %>);background-position:center"></div>
-        <h2><%= @politician.nickname %></h2>
-        <h4><%= @politician.party %></h4>
+        <h3>Fique de olho em:</h3>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta pariatur deserunt sequi sapiente illo voluptatibus.</p>
+        <%= render :partial => "politician", locals: {hide_social: true} %>
+        <hr>
+        <p>            Preencha os campos para seguir <strong><%= @politician.name %></strong> e receber informações sobre sua movimentação.</p>
+        <%= form_for User.new do |f| %>
         <form role="form">
           <div class="form-group">
-            <label>Nome</label>
-            <input type="text" class="form-control" placeholder="Nome">
+            <input type="hidden" name="politician_id" value="<%= @politician.id %>" />
+            <%= f.text_field :name, class: "form-control", placeholder: "Nome" %>
           </div>
           <div class="form-group">
-            <label>Email</label>
-            <input type="email" class="form-control" placeholder="Email">
+            <%= f.text_field :email, class: "form-control", placeholder: "Email" %>
           </div>
           <div class="form-group">
-            <label>Celular</label>
-            <input type="text" class="form-control" placeholder="Celular">
+            <%= f.text_field :phone, class: "form-control", placeholder: "Telefone" %>
           </div>
           <button type="submit" class="btn btn-default">Cadastrar</button>
-        </form>
+        <% end %>
       </div>
     </div>
   </div>

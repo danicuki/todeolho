@@ -16,20 +16,19 @@
 }
 
 .select2-container, .select2-container * {
-margin: 0;
-position: relative;
-display: inline-block;
-zoom: 1;
-vertical-align: middle;
-border: 0px;
-border-bottom: 1px solid #dfdfdf;
-background: white;
-/* height: 50px; */
+	margin: 0;
+	position: relative;
+	display: inline-block;
+	zoom: 1;
+	vertical-align: middle;
+	border: 0px;
+	border-bottom: 1px solid #dfdfdf;
+	background: white;
+	/* height: 50px; */
 }
 
 .select2-default {
-color: #dfdfdf !important;
-font-weight: 100;
-font-size: 48px;
+	color: #dfdfdf !important;
+	font-weight: 100;
+	font-size: 48px;
 }
-

@@ -1,0 +1,10 @@
+<div class="thumb circle-medium-thumb politician-thumb" id="politician-photo" style="background-image:url(<%= @politician.image %>);"></div>
+<% unless defined?(hide_social) %>
+<div id="social-icons">
+  <i class="fa fa-twitter"></i>
+  <i class="fa fa-facebook-square"></i>
+  <i class="fa fa-globe"></i>
+</div>
+<% end %>
+<h2><%= @politician.nickname %></h2>
+<p class="party"><%= @politician.party %></p>
