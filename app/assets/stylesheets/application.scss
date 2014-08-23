@@ -21,6 +21,11 @@
 	border-color: white;
 }
 
+.dialog-box p {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
 .jumbotron{
 	background-color: white;
 }
@@ -72,7 +77,7 @@ h3 {
 p {
 	font-weight: 100;
 	font-size: 20px;
-	color: #b1b1b1;	
+	color: #b1b1b1;
 }
 
 body {
@@ -177,7 +182,7 @@ footer > .container {
 #resultPolitician li a {
 	display: table;
 	border: 1px solid #ddd;
-	border-top: none; 
+	border-top: none;
 	background: #fff;
 	width: 90%;
 	padding: 10px 15px;
@@ -268,9 +273,16 @@ footer > .container {
 	left: 0;
 }
 
+.dialog-img.thumb {
+	background: transparent;
+}
+.dialog-img img {
+	max-width: 100%;
+}
+
 .dialog-box {
 	float: right;
-	border: 1px solid #000;
+	border: 1px solid #CCC;
 	width: 285px;
 	height: 130px;
 	padding: 10px 15px;
@@ -297,7 +309,7 @@ footer > .container {
     left: 61px;
     border-style: solid;
     border-width: 9px 14px 9px 0;
-    border-color: transparent #000;
+    border-color: transparent #ccc;
     display: block;
     width: 0;
     z-index: 1;
@@ -305,7 +317,7 @@ footer > .container {
 
 .dialog-box h4 {
 	display: inline;
-	margin-bottom: 14px; 
+	margin-bottom: 14px;
 }
 
 .dialog-box span {
