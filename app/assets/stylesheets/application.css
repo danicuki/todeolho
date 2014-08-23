@@ -211,3 +211,20 @@ footer > .container {
 	float: right;
 }
 
+.info {
+	text-align: center;
+}
+
+.info span, .info strong {
+	display: block;
+}
+
+.info-img {
+	margin-left: auto;
+	margin-bottom: 14px;
+	margin-right: auto;
+}
+
+.history {
+	margin-top: 24px;
+}

@@ -165,37 +165,10 @@ $(function() {
               <span><%= @politician.cpf %></span>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="info">
-              <div class="thumb circle-small-thumb info-img"></div>
-              <strong>INSTRUÇÃO</strong>
-              <span><%= @politician.scholarity %></span>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="row">
-          <div class="col-md-4">
-            <div class="info">
-              <div class="thumb circle-small-thumb info-img"></div>
-              <strong>CARGO CONCORRENTE</strong>
-              <span><%= @politician.job_title %></span>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="info">
-              <div class="thumb circle-small-thumb info-img"></div>
-              <strong>NÚMERO ATUAL DO CANDIDADATO</strong>
-              <span>60 anos</span>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="info">
-              <div class="thumb circle-small-thumb info-img"></div>
-              <strong>NÚMERO DO TÍTULO ATUAL</strong>
-              <span>60 anos</span>
-            </div>
-          </div>
+        <div class="history">
+          <h4>Hitórico de cargos</h4>
+        <p><%= @politician.job_title %></p>
         </div>
       </div>
     </div>
