@@ -16,11 +16,30 @@
  *= require font-awesome
  *= require_self
  */
+.navbar-default{
+	background-color: white;
+	border-color: white;
+}
+
+.navbar {
+	position: relative;
+	height: 15px;
+	/* margin-bottom: 20px; */
+	padding: 0px;
+	margin: 0px;
+	min-height: 0px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	border: 1px solid transparent;
+}
 
 h2 {
 	text-align: center;
 }
 
+body {
+	font-family: 'Roboto', sans-serif;
+}
 .jumbotron {
 	text-align: center;
 	position: relative;
