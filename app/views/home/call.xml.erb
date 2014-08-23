@@ -12,7 +12,7 @@
 	    	<%= @notification.message %>
 	    </Say>
 
-		<Gather numDigits="1" action="call.xml?user_id=<%= @user.id %>&amp;notification_id=<%= @notification.id %>"   method="POST">
+		<Gather numDigits="1" action="call.xml?user_id=<%= @user.id %>&amp;notification_id=<%= @notification.id %>"   method="GET">
 	        <Say voice="alice" language="pt-BR">
 	            Para ouvir de novo, digite 1.  
 	            Se quiser gravar uma mensagem de voz para o seu candidato, digite 2.
@@ -22,7 +22,7 @@
 	    <% end %>
 	    <% if params[:Digits] == "2" %>
 	        <Say voice="alice" language="pt-BR">Grave sua mensagem após o sinal.</Say>
-	    	<Record maxLength="30" action="call.xml?play=true" />
+	    	<Record maxLength="30" action="call.xml?play=true" method="GET"/>
 	    <% end %>
     <% end %>
 </Response>
