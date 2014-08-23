@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Say voice="alice" language="pt-BR">Olá <%= @user.name %>, 
-    	temos uma novidade do político <%= @notification.politician.name %>.
+	<% if params[:play] %>
+		<Say>Sua mensagem grava é:</Say>
+    	<Play><%= params[:RecordingUrl] %></Play>
+    	<Say>Vamos enviar para o email do político. Tichaaaauu</Say>
+	<% else %>
+		<% if params[:Digits].blank?  || params[:Digits] == "1" %>
+	    <Say voice="alice" language="pt-BR">Olá <%= @user.name %>, 
+	    	temos uma novidade do político <%= @notification.politician.name %>.
 
-    	<%= @notification.message %></Say>
+	    	<%= @notification.message %>
+	    </Say>
+
+		<Gather numDigits="1" action="call.xml?user_id=<%= @user.id %>&amp;notification_id=<%= @notification.id %>"   method="POST">
+	        <Say>
+	            Para ouvir de novo, digite 1.  
+	            Se quiser gravar uma mensagem de voz para o seu candidato, digite 2.
+	            Para finalizar a ligação, digite qualquer outro número.
+	        </Say>
+	    </Gather>
+	    <% end %>
+	    <% if params[:Digits] == "2" %>
+	        <Say>Grave sua mensagem após o sinal.</Say>
+	    	<Record maxLength="30" action="call.xml?play=true" />
+	    <% end %>
+    <% end %>
 </Response>
