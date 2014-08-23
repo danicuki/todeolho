@@ -2,6 +2,6 @@
 class NotificationPreview < ActionMailer::Preview
 
   def notify
-    NotificationMailer.notify(User.first)
+    NotificationMailer.notify(User.first, Notification.first)
   end
 end
