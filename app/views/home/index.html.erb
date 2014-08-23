@@ -3,36 +3,30 @@ $(function() {
   $("#searchPolitician").select2({
     placeholder: "Buscar politico",
     minimumInputLength: 1,
-        ajax: {
-        url: "/politicians.json",
-        dataType: 'json',
-            results: function (data, page) {
-                return {results: data};
-              }
-            },
-            initSelection: function(element, callback) {
-              debugger;
-
-            var id=$(element).val();
-            if (id!=="") {
-              $.ajax("http://api.rottentomatoes.com/api/public/v1.0/movies/"+id+".json", {
-                data: {
-                  apikey: "ju6z9mjyajq2djue3gbvv26t"
-                },
-                dataType: "jsonp"
-              }).done(function(data) { callback(data); });
-            }
-          },
+    ajax: {
+      url: "/politicians.json",
+      dataType: 'json',
+      data: function (term, page) {
+      debugger;
+            return {
+                q: term,
+                limit: 10
+            };
+      },
+      results: function (data, page) {
+        return {results: data};
+      }
+    },
     formatResult: function(p){
       if(p.image)  return "<img src='" + p.image  + "'/>"+ p.name;
-       return  p.name;
-
+      return  p.name;
     },
-
-        dropdownCssClass: "bigdrop",
-        escapeMarkup: function (m) { return m; }
+    dropdownCssClass: "bigdrop",
+    escapeMarkup: function (m) { return m; }
+  }).on("change", function(e){
+    window.location = "/politicians/"+e.val
   });
-  });
+});
 </script>
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <nav class="navbar navbar-default" role="navigation">
@@ -44,8 +38,8 @@ $(function() {
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        <%= image_tag "logo.png", width: "271", height: "101" %>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quam!</p>
+        <%= image_tag "logo.png", width: "271", height: "101", id: "home-logo" %>
+        <p id="home-text">Aqui você pode saber mais sobre seu político preferido e acompanha suas movimentações em seu gabinete.</p>
         <form role="form" id="form-search">
           <div class="form-group">
             <label class="sr-only" for="searchPolitician"></label>
