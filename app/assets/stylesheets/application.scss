@@ -27,16 +27,25 @@
 
 .navbar {
 	position: relative;
-	height: 5px;
-	/* margin-bottom: 20px; */
+	height: 70px;
 	padding: 0px;
 	margin: 0px;
 	min-height: 0px;
 	margin-bottom: 0px;
 	border-radius: 0px;
-	border: 1px solid transparent;
+	border-bottom: 1px solid #ddd;
+	background-color: #fff;
 	background-image: asset-url('firula.png');
 	background-repeat: no-repeat;
+	display: table;
+	width: 100%;
+}
+
+.navbar-brand img {
+	width: 45px;
+	height: 43px;
+	position: absolute;
+	top: 13px;
 }
 
 h2 {
@@ -268,4 +277,34 @@ footer > .container {
 
 #follow-subscribe form button {
 	width: 100%
+}
+
+.form-control.select2-container {
+	border: none;
+	box-shadow: none;
+}
+
+.navbar-form .form-control.select2-container {
+	left: 53px;
+}
+
+.form-control .select2-choice .select2-arrow {
+	display: none;
+}
+
+.form-control .select2-choice {
+	background-image: none;
+	background-color: #fff;
+	height: 38px;
+	top: 11px;
+}
+
+.navbar-form .select2-container .select2-choice > .select2-chosen {
+	border-bottom: none;
+}
+
+.select2-container .select2-choice > .select2-chosen {
+	height: 38px;
+	line-height: 31px;
+	font-size: 38px;
 }
