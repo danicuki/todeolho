@@ -17,7 +17,7 @@ namespace :importer do
       p.nickname = politician[:apelido]
       p.party = politician[:partido]
       p.job_title = politician[:cargos]
-      p.age = politician[:apelido]
+      p.age = ""
       p.cpf = politician[:CPF]
       p.bio = politician[:miniBio]
 
