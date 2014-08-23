@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823155429) do
+ActiveRecord::Schema.define(version: 20140823172535) do
 
   create_table "notifications", force: true do |t|
     t.integer  "politician_id"
@@ -28,6 +28,16 @@ ActiveRecord::Schema.define(version: 20140823155429) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
+    t.string   "nickname"
+    t.string   "party"
+    t.text     "bio"
+    t.string   "job_title"
+    t.string   "candidate_number"
+    t.string   "candidate_title"
+    t.string   "age"
+    t.string   "cpf"
+    t.string   "scholarity"
   end
 
   create_table "politicians_users", force: true do |t|
@@ -35,8 +45,8 @@ ActiveRecord::Schema.define(version: 20140823155429) do
     t.integer "politician_id"
   end
 
-  add_index "politicians_users", ["politician_id"], name: "index_politicians_users_on_politician_id"
-  add_index "politicians_users", ["user_id"], name: "index_politicians_users_on_user_id"
+  add_index "politicians_users", ["politician_id"], name: "index_politicians_users_on_politician_id", using: :btree
+  add_index "politicians_users", ["user_id"], name: "index_politicians_users_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
