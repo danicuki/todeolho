@@ -7,7 +7,6 @@ $(function() {
       url: "/politicians.json",
       dataType: 'json',
       data: function (term, page) {
-      debugger;
             return {
                 q: term,
                 limit: 10
@@ -32,6 +31,8 @@ $(function() {
 <nav class="navbar navbar-default" role="navigation">
   &nbsp;
 </nav>
+<%= render partial: "shared/flash_messages", flash: flash %>
+
 
 <div class="jumbotron">
   <div class="container">
