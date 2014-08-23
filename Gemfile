@@ -43,5 +43,5 @@ gem 'rails_12factor', group: :production
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-
+gem "select2-rails"
 gem 'curb'

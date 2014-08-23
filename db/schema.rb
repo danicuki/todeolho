@@ -30,13 +30,15 @@ ActiveRecord::Schema.define(version: 20140823155429) do
     t.datetime "updated_at"
   end
 
+  add_index "politicians", ["api_id"], name: "api_id", unique: true, using: :btree
+
   create_table "politicians_users", force: true do |t|
     t.integer "user_id"
     t.integer "politician_id"
   end
 
-  add_index "politicians_users", ["politician_id"], name: "index_politicians_users_on_politician_id", using: :btree
-  add_index "politicians_users", ["user_id"], name: "index_politicians_users_on_user_id", using: :btree
+  add_index "politicians_users", ["politician_id"], name: "index_politicians_users_on_politician_id"
+  add_index "politicians_users", ["user_id"], name: "index_politicians_users_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
