@@ -25,6 +25,12 @@
 	background-color: white;
 }
 
+.thumb.politician-thumb {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: white;
+}
+
 .navbar {
 	position: relative;
 	height: 5px;
@@ -98,6 +104,15 @@ body {
 	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.btn {
+	border-radius: 0px;
+	border: solid 1px #2ecc71;
+	color: #2ecc71;
+	height: 70px;
+	font-size: 36px;
+	font-weight: 100;
 }
 
 html {

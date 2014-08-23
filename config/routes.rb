@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   #   resources :products
 
   resources :politicians
+  resources :users
   # Example resource route with options:
   #   resources :products do
   #     member do
