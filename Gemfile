@@ -47,4 +47,4 @@ gem 'rails_12factor', group: :production
 gem "select2-rails"
 gem 'curb'
 gem "font-awesome-rails"
-gem 'sqlite3'
+gem 'sqlite3', group: :development
