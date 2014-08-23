@@ -16,11 +16,36 @@
  *= require font-awesome
  *= require_self
  */
+.navbar-default{
+	background-color: white;
+	border-color: white;
+}
+
+.jumbotron{
+	background-color: white;
+}
+
+.navbar {
+	position: relative;
+	height: 5px;
+	/* margin-bottom: 20px; */
+	padding: 0px;
+	margin: 0px;
+	min-height: 0px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	border: 1px solid transparent;
+	background-image: asset-url('firula.png');
+	background-repeat: no-repeat;
+}
 
 h2 {
 	text-align: center;
 }
 
+body {
+	font-family: 'Roboto', sans-serif;
+}
 .jumbotron {
 	text-align: center;
 	position: relative;
