@@ -25,8 +25,8 @@ Rails.application.configure do
     :address   => "smtp.mandrillapp.com",
     :port      => 587,
     :enable_starttls_auto => true,
-    :user_name => '',
-    :password  => ''
+    :user_name => 'danicuki@gmail.com',
+    :password  => 'RD8_gjhBZPla-BgnWohVcg'
   }
 
   # Print deprecation notices to the Rails logger.

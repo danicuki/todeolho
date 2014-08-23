@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  politician_id: 
+  category: MyString
+  message: MyText
+
+two:
+  politician_id: 
+  category: MyString
+  message: MyText

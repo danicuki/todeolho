@@ -1,4 +1,4 @@
-class Notification < ActionMailer::Base
+class NotificationMailer < ActionMailer::Base
   default from: "from@example.com"
 
   def notify(user)
