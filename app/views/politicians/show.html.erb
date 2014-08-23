@@ -106,7 +106,7 @@ $(function() {
         <% @notifications.each do |notification| %>
           <div class="col-md-6">
             <div class="dialog">
-              <div class="thumb small-thumb dialog-img"></div>
+              <div class="thumb small-thumb dialog-img"><%= image_tag 'simbolo.png' %></div>
               <div class="dialog-box">
                 <h4><%= notification.category %></h4>
                 <span><%= time_ago_in_words notification.created_at %></span>
