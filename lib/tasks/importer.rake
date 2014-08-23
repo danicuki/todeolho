@@ -16,11 +16,12 @@ namespace :importer do
       p.image = politician[:apelido]
       p.nickname = politician[:apelido]
       p.party = politician[:partido]
-      p.job_title = politician[:cargo]
-      p.candidate_number  = politician[:apelido]
+      p.job_title = politician[:cargos]
+      p.candidate_number = politician[:apelido]
       p.candidate_title = politician[:apelido]
       p.age = politician[:apelido]
-      p.cpf  = politician[:CPF]
+      p.cpf = politician[:CPF]
+      p.bio = politician[:miniBio]
 
       p.save!
     end
