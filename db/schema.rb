@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823141522) do
+ActiveRecord::Schema.define(version: 20140823155429) do
+
+  create_table "notifications", force: true do |t|
+    t.integer  "politician_id"
+    t.string   "category"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "notifications", ["politician_id"], name: "index_notifications_on_politician_id", using: :btree
 
   create_table "politicians", force: true do |t|
     t.string   "api_id"
@@ -19,6 +29,8 @@ ActiveRecord::Schema.define(version: 20140823141522) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "politicians", ["api_id"], name: "api_id", unique: true, using: :btree
 
   create_table "politicians_users", force: true do |t|
     t.integer "user_id"

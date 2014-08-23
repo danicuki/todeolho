@@ -42,3 +42,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem "select2-rails"
+gem 'curb'
