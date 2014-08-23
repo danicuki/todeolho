@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823172535) do
+ActiveRecord::Schema.define(version: 20140823182741) do
 
   create_table "notifications", force: true do |t|
     t.integer  "politician_id"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20140823172535) do
     t.string   "nickname"
     t.string   "party"
     t.text     "bio"
-    t.string   "job_title"
+    t.text     "job_title"
     t.string   "candidate_number"
     t.string   "candidate_title"
     t.string   "age"
