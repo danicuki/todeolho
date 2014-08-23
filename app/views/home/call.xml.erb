@@ -6,6 +6,7 @@
     	<Say voice="alice" language="pt-BR">Vamos enviar para o email do político. Tichaaaauu</Say>
 	<% else %>
 		<% if params[:Digits].blank?  || params[:Digits] == "1" %>
+		<Pause length="5"/>
 	    <Say voice="alice" language="pt-BR">Olá <%= @user.name %>, 
 	    	temos uma novidade do político <%= @notification.politician.name %>.
 
