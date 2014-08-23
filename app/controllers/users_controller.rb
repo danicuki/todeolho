@@ -25,9 +25,11 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    politician = Politician.find(params[:politician_id])
 
     respond_to do |format|
       if @user.save
+        send_twilio(@user, politician.notifications.last)
         format.html { redirect_to root_path, notice: 'Agora você receberá as novidades desse candidato' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -35,6 +37,26 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def send_twilio(user, notification)
+    account_sid = 'AC971d30fa136de2d68838e10144e2a867' 
+    auth_token = '5e56f633a54abb5012ccc774ef3a321b' 
+ 
+    # set up a client to talk to the Twilio REST API 
+    @client = Twilio::REST::Client.new account_sid, auth_token 
+     
+    @client.account.calls.create({
+      :to => user.phone, 
+      :from => '+12677513853', 
+      :url => "http://todeolho.herokuapp.com/call.xml?user_id=#{user.id}&#38;notification_id=#{notification.id}",  
+      :method => 'GET',  
+      :fallback_method => 'GET',  
+      :status_callback_method => 'GET',    
+      :record => 'false'
+    })
+
+      
   end
 
   # PATCH/PUT /users/1
