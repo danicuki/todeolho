@@ -37,6 +37,22 @@ $(function() {
         dropdownCssClass: "bigdrop", // apply css that makes the dropdown taller
         escapeMarkup: function (m) { return m; } // we do not want to escape markup since we are displaying html in results
       });
+      
+      $('#notifications-button').click(function() {
+        $('.active').removeClass();
+        $(this).closest('li').addClass('active');
+        $('#infos-section').hide();
+        $('#notifications-section').show();
+        return false;
+      });
+
+     $('#infos-button').click(function() {
+      $('.active').removeClass();
+      $(this).closest('li').addClass('active');
+      $('#notifications-section').hide();
+      $('#infos-section').show();
+      return false;
+    });
   });
 </script>
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -64,7 +80,7 @@ $(function() {
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        <div class="thumb circle-medium-thumb" id="politician-photo"></div>
+        <div class="thumb circle-medium-thumb" id="politician-photo" style="background-image:url(<%= @politician.image %>);background-position:center"></div>
         <div id="social-icons">
           <i class="fa fa-twitter"></i>
           <i class="fa fa-facebook-square"></i>
@@ -74,7 +90,9 @@ $(function() {
         <p><%= @politician.party %></p>
         <hr/>
         <p><%= @politician.bio %></p>
-        <button type="button" class="btn btn-default col-sm-8" id="follow">FIQUE DE OLHO</button>
+        <label class='col-sm-2'></label>
+        <a class="btn btn-default col-sm-8" id="follow">FIQUE DE OLHO</a>
+        <div class="col-sm-2"></div>
       </div>
       <div class="col-md-2"></div>
     </div>
@@ -83,6 +101,104 @@ $(function() {
 
 <div class="container">
   <div class="row">
-    
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li class="active"><a href="#" id="notifications-button">NOTIFICAÇÕES</a></li>
+        <li><a href="#" id="infos-button">INFOS</a></li>
+      </ul>
+      <div id="notifications-section">
+        <div class="row">
+          <div class="col-md-6">
+            
+            <div class="dialog">
+              <div class="thumb small-thumb dialog-img"></div>  
+              <div class="dialog-box">
+                <h4>Projeto</h4>
+                <span>23/08/2014 - 13:00</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consectetur, iusto ratione sunt, consequuntur beatae!</p>
+              </div>
+            </div>
+            
+            <div class="dialog">
+              <div class="thumb small-thumb dialog-img"></div>  
+              <div class="dialog-box">
+                <h4>Patrimônio</h4>
+                <span>23/08/2014 - 13:00</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consectetur, iusto ratione sunt, consequuntur beatae!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="dialog">
+              <div class="thumb small-thumb dialog-img"></div>  
+              <div class="dialog-box">
+                <h4>Processo</h4>
+                <span>23/08/2014 - 13:00</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consectetur, iusto ratione sunt, consequuntur beatae!</p>
+              </div>
+            </div>
+            <div class="dialog">
+              <div class="thumb small-thumb dialog-img"></div>  
+              <div class="dialog-box">
+                <h4>Bio</h4>
+                <span>23/08/2014 - 13:00</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consectetur, iusto ratione sunt, consequuntur beatae!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="infos-section">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="info">
+              <div class="thumb circle-small-thumb info-img"></div>
+              <strong>IDADE</strong>
+              <span><%= @politician.age %></span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info">
+              <div class="thumb circle-small-thumb info-img"></div>
+              <strong>CPF</strong>
+              <span><%= @politician.cpf %></span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info">
+              <div class="thumb circle-small-thumb info-img"></div>
+              <strong>INSTRUÇÃO</strong>
+              <span><%= @politician.scholarity %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-4">
+            <div class="info">
+              <div class="thumb circle-small-thumb info-img"></div>
+              <strong>CARGO CONCORRENTE</strong>
+              <span><%= @politician.job_title %></span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info">
+              <div class="thumb circle-small-thumb info-img"></div>
+              <strong>NÚMERO ATUAL DO CANDIDADATO</strong>
+              <span>60 anos</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info">
+              <div class="thumb circle-small-thumb info-img"></div>
+              <strong>NÚMERO DO TÍTULO ATUAL</strong>
+              <span>60 anos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
   </div>
 </div> <!-- /container -->
