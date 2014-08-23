@@ -91,7 +91,7 @@ $(function() {
         <hr/>
         <p><%= @politician.bio %></p>
         <label class='col-sm-2'></label>
-        <a class="btn btn-default col-sm-8" id="follow">FIQUE DE OLHO</a>
+        <button class="btn btn-default col-sm-8" id="follow" data-toggle="modal" data-target="#follow-subscribe">FIQUE DE OLHO</button>
         <div class="col-sm-2"></div>
       </div>
       <div class="col-md-2"></div>
@@ -175,3 +175,19 @@ $(function() {
     <div class="col-md-2"></div>
   </div>
 </div> <!-- /container -->
+
+<div class="modal fade bs-example-modal-sm" id="follow-subscribe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3>FIQUE DE OLHO EM:</h3>
+        <div class="thumb circle-medium-thumb" id="politician-photo" style="background-image:url(<%= @politician.image %>);background-position:center"></div>
+        <h2><%= @politician.nickname %></h2>
+        <h4><%= @politician.party %></h4>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta pariatur deserunt sequi sapiente illo voluptatibus.</p>
+      </div>
+    </div>
+  </div>
+</div>
