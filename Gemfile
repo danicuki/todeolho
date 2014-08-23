@@ -43,3 +43,4 @@ gem 'spring',        group: :development
 
 gem "select2-rails"
 gem 'curb'
+gem "font-awesome-rails"

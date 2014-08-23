@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20140823155429) do
     t.datetime "updated_at"
   end
 
-  add_index "notifications", ["politician_id"], name: "index_notifications_on_politician_id", using: :btree
+  add_index "notifications", ["politician_id"], name: "index_notifications_on_politician_id"
 
   create_table "politicians", force: true do |t|
     t.string   "api_id"
@@ -29,8 +29,6 @@ ActiveRecord::Schema.define(version: 20140823155429) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "politicians", ["api_id"], name: "api_id", unique: true, using: :btree
 
   create_table "politicians_users", force: true do |t|
     t.integer "user_id"

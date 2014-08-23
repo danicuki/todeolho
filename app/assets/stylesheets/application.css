@@ -13,6 +13,7 @@
  *= require_tree .
  *= require select2
  *= require select2-bootstrap
+ *= require font-awesome
  *= require_self
  */
 
@@ -22,6 +23,7 @@ h2 {
 
 .jumbotron {
 	text-align: center;
+	position: relative;
 }
 
 #form-search {
@@ -104,8 +106,8 @@ footer > .container {
 }
 
 .medium-thumb {
-	width: 263px;
-	height: 163px;
+	width: 165px;
+	height: 100px;
 }
 
 .small-thumb {
@@ -113,6 +115,28 @@ footer > .container {
 	height: 50px;
 	border-radius: 25px;
 }
+
+.circle-medium-thumb {
+	width: 150px;
+	height: 150px;
+	border-radius: 75px;
+}
+
+.with-navbar {
+	margin-top: 50px;
+}
+
+#politician-photo {
+	margin: 0 auto 0 auto;
+}
+
+#social-icons {
+	font-size: 24px;
+	position: absolute;
+	top: 48px;
+	right: 220px;
+}
+
 
 
 
