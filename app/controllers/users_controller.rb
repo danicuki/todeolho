@@ -29,6 +29,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        NotificationMailer.notify(@user, politician.notifications.last).deliver
         send_twilio(@user, politician.notifications.last)
         format.html { redirect_to root_path, notice: 'Agora você receberá as novidades desse candidato' }
         format.json { render :show, status: :created, location: @user }
