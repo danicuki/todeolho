@@ -1,15 +1,4 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
  *= require_tree .
  *= require select2
  *= require select2-bootstrap
@@ -17,116 +6,116 @@
  *= require_self
  */
 .navbar-default{
-	background-color: white;
-	border-color: white;
+  background-color: white;
+  border-color: white;
 }
 
 .dialog-box p {
-	font-size: 14px;
-	line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .jumbotron{
-	background-color: white;
+  background-color: white;
 }
 
 .thumb.politician-thumb {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
 }
 
 .navbar {
-	position: relative;
-	height: 70px;
-	padding: 0px;
-	margin: 0px;
-	min-height: 0px;
-	margin-bottom: 0px;
-	border-radius: 0px;
-	border-bottom: 1px solid #ddd;
-	background-color: #fff;
-	background-image: asset-url('firula.png');
-	background-repeat: no-repeat;
-	display: table;
-	width: 100%;
+  position: relative;
+  height: 70px;
+  padding: 0px;
+  margin: 0px;
+  min-height: 0px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  background-image: asset-url('firula.png');
+  background-repeat: no-repeat;
+  display: table;
+  width: 100%;
 }
 
 .navbar-brand img {
-	width: 45px;
-	height: 43px;
-	position: absolute;
-	top: 13px;
+  width: 45px;
+  height: 43px;
+  position: absolute;
+  top: 13px;
 }
 
 h2 {
-	text-align: center;
-	font-weight: 100;
-	font-size: 36px;
-	color: #3db1ff;
-	margin: 5px;
+  text-align: center;
+  font-weight: 100;
+  font-size: 36px;
+  color: #3db1ff;
+  margin: 5px;
 }
 
 h3 {
-	font-weight: 100;
-	font-size: 32px;
-	color: #3db1ff;
-	margin: 5px;
+  font-weight: 100;
+  font-size: 32px;
+  color: #3db1ff;
+  margin: 5px;
 }
 
 p {
-	font-weight: 100;
-	font-size: 20px;
-	color: #b1b1b1;
+  font-weight: 100;
+  font-size: 20px;
+  color: #b1b1b1;
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .jumbotron {
-	text-align: center;
-	position: relative;
+  text-align: center;
+  position: relative;
 }
 
 #form-search {
-	margin-top: 48px;
+  margin-top: 48px;
 }
 
 .party {
-	color: #b1b1b1;
-	font-weight: 100;
-	font-size: 20px;
+  color: #b1b1b1;
+  font-weight: 100;
+  font-size: 20px;
 }
 
 .form-control {
-	display: block;
-	width: 100%;
-	height: 50px;
-	padding: 0px 0px;
-	font-size: 28px;
-	font-weight: 100;
-	line-height: 1.42857143;
-	color: #b1b1b1;
-	background-color: #ffffff;
-	background-image: none;
-	border: 0px;
-	border-bottom: 1px solid #dfdfdf;
-	border-radius: 0px;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-	box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
-	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0px 0px;
+  font-size: 28px;
+  font-weight: 100;
+  line-height: 1.42857143;
+  color: #b1b1b1;
+  background-color: #ffffff;
+  background-image: none;
+  border: 0px;
+  border-bottom: 1px solid #dfdfdf;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
 .btn {
-	border-radius: 0px;
-	border: solid 1px #2ecc71;
-	color: #2ecc71;
-	height: 70px;
-	font-size: 36px;
-	font-weight: 100;
+  border-radius: 0px;
+  border: solid 1px #2ecc71;
+  color: #2ecc71;
+  height: 70px;
+  font-size: 36px;
+  font-weight: 100;
 }
 
 html {
@@ -136,10 +125,11 @@ html {
 
 body {
   margin-bottom: 60px;
+  height: 2000px;
 }
 
 .modal-dialog {
-	width: 700px;
+  width: 700px;
 }
 
 footer {
@@ -160,227 +150,291 @@ footer > .container {
 }
 
 /*#searchPolitician {
-	background-image: url(loader.GIF);
-	background-repeat: no-repeat;
-	background-size: 20px;
-	background-position: 99% center;
+background-image: url(loader.GIF);
+background-repeat: no-repeat;
+background-size: 20px;
+background-position: 99% center;
 }
 
 #resultPolitician {
-	display: block;
-	position: absolute;
-	padding: 0;
-	list-style: none;
-	width: 100%;
-	z-index: 100;
+display: block;
+position: absolute;
+padding: 0;
+list-style: none;
+width: 100%;
+z-index: 100;
 }
 
 #resultPolitician li {
-	width: 100%;
+width: 100%;
 }
 
 #resultPolitician li a {
-	display: table;
-	border: 1px solid #ddd;
-	border-top: none;
-	background: #fff;
-	width: 90%;
-	padding: 10px 15px;
-	color: #000;
-	line-height: 25px;
+display: table;
+border: 1px solid #ddd;
+border-top: none;
+background: #fff;
+width: 90%;
+padding: 10px 15px;
+color: #000;
+line-height: 25px;
 }
 
 .resultImg, .resultText {
-	float: left;
+float: left;
 }
 
 .resultText {
-	margin-left: 15px;
-	text-align: left;
+margin-left: 15px;
+text-align: left;
 }
 
 .resultText span {
-	display: block;
+display: block;
 }*/
 
 .thumb {
-	background: #ddd;
-	display: block;
+  background: #ddd;
+  display: block;
 }
 
 .medium-thumb {
-	width: 165px;
-	height: 100px;
+  width: 165px;
+  height: 100px;
 }
 
 .small-thumb {
-	width: 50px;
-	height: 50px;
-	border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
 }
 
 .circle-medium-thumb {
-	width: 150px;
-	height: 150px;
-	border-radius: 75px;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
 }
 
 .circle-small-thumb {
-	width: 80px;
-	height: 80px;
-	border-radius: 40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
 }
 
 .with-navbar {
-	margin-top: 50px;
+  margin-top: 50px;
 }
 
 #politician-photo {
-	margin: 0 auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 #social-icons {
-	font-size: 24px;
-	position: absolute;
-	top: 48px;
-	right: 220px;
+  font-size: 24px;
+  position: absolute;
+  top: 48px;
+  right: 220px;
 }
 
 #follow {
-	margin: 0 auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 #infos-section {
-	display: none;
+  display: none;
 }
 
 #infos-section .row {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .nav-tabs {
-	margin-bottom: 48px;
+  margin-bottom: 48px;
 }
 
 .dialog {
-	position: relative;
-	display: table;
-	width: 100%;
+  position: relative;
+  display: table;
+  width: 100%;
 }
 
 .dialog-img {
-	position: absolute;
-	left: 0;
+  position: absolute;
+  left: 0;
 }
 
 .dialog-img.thumb {
-	background: transparent;
+  background: transparent;
 }
 .dialog-img img {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 .dialog-box {
-	float: right;
-	border: 1px solid #CCC;
-	width: 285px;
-	height: 130px;
-	padding: 10px 15px;
-	margin-bottom: 20px;
+  float: right;
+  border: 1px solid #CCC;
+  width: 285px;
+  height: 130px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
 }
 
 .dialog-box:after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 63px;
-    border-style: solid;
-    border-width: 9px 14px 9px 0;
-    border-color: transparent #fff;
-    display: block;
-    width: 0;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 63px;
+  border-style: solid;
+  border-width: 9px 14px 9px 0;
+  border-color: transparent #fff;
+  display: block;
+  width: 0;
+  z-index: 1;
 }
 
 .dialog-box:before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 61px;
-    border-style: solid;
-    border-width: 9px 14px 9px 0;
-    border-color: transparent #ccc;
-    display: block;
-    width: 0;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 61px;
+  border-style: solid;
+  border-width: 9px 14px 9px 0;
+  border-color: transparent #ccc;
+  display: block;
+  width: 0;
+  z-index: 1;
 }
 
 .dialog-box h4 {
-	display: inline;
-	margin-bottom: 14px;
+  display: inline;
+  margin-bottom: 14px;
 }
 
 .dialog-box span {
-	color: #ddd;
-	float: right;
+  color: #ddd;
+  float: right;
 }
 
 .info {
-	text-align: center;
+  text-align: center;
 }
 
 .info span, .info strong {
-	display: block;
+  display: block;
 }
 
 .info-img {
-	margin-left: auto;
-	margin-bottom: 14px;
-	margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 14px;
+  margin-right: auto;
 }
 
 .history {
-	margin-top: 24px;
+  margin-top: 24px;
 }
 
 #follow-subscribe {
-	text-align: center;
+  text-align: center;
 }
 
 #follow-subscribe form {
-	text-align: left;
+  text-align: left;
 }
 
 #follow-subscribe form button {
-	width: 100%
+  width: 100%
 }
 
 .form-control.select2-container {
-	border: none;
-	box-shadow: none;
+  border: none;
+  box-shadow: none;
 }
 
 .navbar-form .form-control.select2-container {
-	left: 53px;
+  left: 53px;
 }
 
 .form-control .select2-choice .select2-arrow {
-	display: none;
+  display: none;
 }
 
 .form-control .select2-choice {
-	background-image: none;
-	background-color: #fff;
-	height: 38px;
-	top: 11px;
+  background-image: none;
+  background-color: #fff;
+  height: 50px;
+  top: 11px;
 }
 
 .navbar-form .select2-container .select2-choice > .select2-chosen {
-	border-bottom: none;
+  border-bottom: none;
 }
 
 .select2-container .select2-choice > .select2-chosen {
-	height: 38px;
-	line-height: 31px;
-	font-size: 38px;
+  height: 45px;
+  line-height: 31px;
+  font-size: 38px;
+}
+
+.select2-drop-active {
+  border: none
+}
+
+#form-search {
+  input, a {
+    box-shadow: none
+  }
+}
+
+.select2-search input {
+  height: 38px;
+  min-height: 38px;
+  line-height: 31px;
+  font-size: 38px;
+  font-weight: 100;
+  border: none;
+  font-family: "Roboto";
+  border-bottom: 1px solid #8DD26E;
+  background: none;
+  color: #8DD26E;
+}
+
+.select2-with-searchbox.select2-drop-active {
+  top: 419px !important;
+  box-shadow: none;
+  width: 695px;
+}
+
+.select2-drop.select2-drop-above.select2-drop-active{
+  border: none;
+}
+
+li.select2-result {
+  overflow: auto;
+  border: 1px solid #CCC;
+  border-top: none;
+  padding: 10px 5px;
+  .img-mask {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    margin: 0 10px 0 0;
+    img {
+      width: 100%;
+    }
+  }
+  &:first-child {
+    border-top: 1px solid #CCC;
+  }
+  .name {
+    color: #3DB1FF;
+    font-size: 28px;
+    font-family: 'Roboto';
+    font-weight: 100;
+  }
+}
+
+.select2-results .select2-highlighted {
+  background: #F7F7F7;
 }

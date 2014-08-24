@@ -1,38 +1,8 @@
-<script>
-$(function() {
-  $("#searchPolitician").select2({
-    placeholder: "Busque por um politico",
-    minimumInputLength: 1,
-    ajax: {
-      url: "/politicians.json",
-      dataType: 'json',
-      data: function (term, page) {
-            return {
-                q: term,
-                limit: 10
-            };
-      },
-      results: function (data, page) {
-        return {results: data};
-      }
-    },
-    formatResult: function(p){
-      if(p.image)  return "<img src='" + p.image  + "'/>"+ p.name;
-      return  p.name;
-    },
-    dropdownCssClass: "bigdrop",
-    escapeMarkup: function (m) { return m; }
-  }).on("change", function(e){
-    window.location = "/politicians/"+e.val
-  });
-});
-</script>
-<!-- Main jumbotron for a primary marketing message or call to action -->
 <nav class="navbar navbar-default" role="navigation" style="border-bottom:none">
-  &nbsp;
+&nbsp;
 </nav>
-<%= render partial: "shared/flash_messages", flash: flash %>
 
+<%= render partial: "shared/flash_messages", flash: flash %>
 
 <div class="jumbotron">
   <div class="container">
@@ -46,23 +16,6 @@ $(function() {
             <label class="sr-only" for="searchPolitician"></label>
             <div class="col-sm-12">
               <input type="text" id="searchPolitician" class="form-control" style="text-align: left;">
-              <!-- <input type="text" class="form-control " id="searchPolitician" placeholder="Procurar por políticos">
-              <ul id="resultPolitician">
-                <li><a href="#">
-                  <div class="thumb small-thumb resultImg"></div>
-                  <div class="resultText">
-                    <strong>Dilma Russeff</strong>
-                    <span>A Dilma é uma pessoa que gosta de vermelho.</span>
-                  </div>
-                </a></li>
-                <li><a href="#">
-                  <div class="thumb small-thumb resultImg"></div>
-                  <div class="resultText">
-                    <strong>Dilma Russeff</strong>
-                    <span>A Dilma é uma pessoa que gosta de vermelho.</span>
-                  </div>
-                </a></li> -->
-              </ul>
             </div>
           </div>
         </form>
