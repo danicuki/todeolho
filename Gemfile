@@ -23,6 +23,8 @@ gem 'font-awesome-rails'
 gem 'premailer-rails'
 gem 'nokogiri'
 
+gem 'transparencia_brasil'
+
 group :development do
   gem 'pry-meta'
   gem 'spring'
