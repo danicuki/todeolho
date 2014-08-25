@@ -21,6 +21,7 @@ gem 'curb'
 gem 'font-awesome-rails'
 gem 'premailer-rails'
 gem 'nokogiri'
+gem 'unicorn'
 
 gem 'transparencia_brasil'
 
