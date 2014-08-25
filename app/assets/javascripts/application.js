@@ -24,13 +24,13 @@ $(document).ready(function(){
         }
       },
       formatResult: function(p){
-        if(p.image)  return "<div class='img-mask'> <img src='" + p.image  + "'/></div><span class='name'>"+ p.name+"</span>";
+        if(p.image)  return "<div class='img-mask'> <img src='" + p.image  + "'/></div><span class='name'>"+ p.nickname+"</span>";
         return p.name;
       },
       dropdownCssClass: "bigdrop",
       escapeMarkup: function (m) { return m; }
     }).on("change", function(e){
-      window.location = "/politicians/"+e.val
+      window.location = "/politicians/"+e.val;
     });
   });
 
