@@ -5,7 +5,7 @@ class PoliticiansController < ApplicationController
   end
 
   def index
-    @politicians = Politician.where("name LIKE ?", "%#{params[:q]}%").limit(params[:limit])
+    @politicians = Politician.where("nickname LIKE ?", "%#{params[:q]}%").limit(params[:limit])
     render json: @politicians
   end
 end
