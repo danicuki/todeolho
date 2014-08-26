@@ -67,12 +67,7 @@
               <div class="dialog-box">
                 <h4><%= notification.category %></h4>
                 <span><%= time_ago_in_words notification.created_at %></span>
-                <p><%=
-
-raw(
-notification.message
-
-)                 %></p>
+                <p><%= raw(notification.message) %></p>
               </div>
             </div>
          </div>
@@ -138,8 +133,8 @@ notification.message
         <hr>
         <%= render :partial => "politician", locals: {hide_social: true} %>
         <hr>
-        <p>            Preencha os campos para seguir <strong><%= @politician.name %></strong> e receber informações sobre sua movimentação.</p>
-        <%= form_for User.new do |f| %>
+        <p>Preencha os campos para seguir <strong><%= @politician.name %></strong> e receber informações sobre sua movimentação.</p>
+        <%= form_for User.new, remote: true do |f| %>
         <form role="form">
           <div class="form-group">
             <input type="hidden" name="politician_id" value="<%= @politician.id %>" />
