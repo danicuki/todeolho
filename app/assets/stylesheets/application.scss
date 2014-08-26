@@ -13,10 +13,10 @@ $light-gray:        #ddd;
 $font-family:       'Roboto', sans-serif;
 $font-normal-size:  18px;
 
-$border-light-gray: 1px solid $light-gray;  
+$border-light-gray: 1px solid $light-gray;
 
 $navbar-height:     70px;
-$footer-height:     60px; 
+$footer-height:     60px;
 
 html {
   position: relative;
@@ -442,7 +442,8 @@ li.select2-result {
 
 
 .form-control.form-control {
-  color:  #3DB1FF
+  color:  #3DB1FF;
+  width: 100%;
 }
 
 .form-control.form-control:focus {
