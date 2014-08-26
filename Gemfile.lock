@@ -49,6 +49,9 @@ GEM
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
     awesome_print (1.2.0)
+    bcrypt (3.1.7)
+    bcrypt-ruby (3.1.5)
+      bcrypt (>= 3.1.3)
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
@@ -65,6 +68,12 @@ GEM
     css_parser (1.3.5)
       addressable
     curb (0.8.5)
+    devise (3.2.3)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.2.1)
     font-awesome-rails (4.1.0.0)
@@ -111,6 +120,7 @@ GEM
     mysql2 (0.3.16)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
+    orm_adapter (0.5.0)
     polyamorous (1.1.0)
       activerecord (>= 3.0)
     polyglot (0.3.5)
@@ -225,6 +235,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -233,6 +245,7 @@ DEPENDENCIES
   activeadmin!
   coffee-rails (~> 4.0.0)
   curb
+  devise
   font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails

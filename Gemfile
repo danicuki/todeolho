@@ -24,6 +24,7 @@ gem 'nokogiri'
 gem 'unicorn'
 gem 'activeadmin', github: 'activeadmin'
 gem 'transparencia_brasil'
+gem 'devise'
 
 group :development do
   gem 'pry-meta'
