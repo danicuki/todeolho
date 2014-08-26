@@ -20,9 +20,12 @@
 }
 
 .thumb.politician-thumb {
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-color: white;
+  width: 126px;
+  height: 126px;
+  border-radius: 50%;
 }
 
 .navbar {
@@ -390,7 +393,7 @@ display: block;
   min-height: 38px;
   line-height: 31px;
   font-size: 38px;
-  font-weight: 100;
+  font-weight: 300;
   border: none;
   font-family: "Roboto";
   border-bottom: 1px solid #8DD26E;
@@ -399,8 +402,8 @@ display: block;
 }
 
 .select2-with-searchbox.select2-drop-active {
-  top: 419px !important;
   box-shadow: none;
+  margin-top: -53px;
   width: 695px;
 }
 
@@ -437,4 +440,14 @@ li.select2-result {
 
 .select2-results .select2-highlighted {
   background: #F7F7F7;
+}
+
+
+.form-control.form-control {
+  color:  #3DB1FF
+}
+
+.form-control.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
