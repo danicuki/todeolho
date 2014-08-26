@@ -7,7 +7,6 @@
 //= require_tree .
 //
 $(document).ready(function(){
-  $(function() {
     $("#searchPolitician").select2({
       placeholder: "Busque por um politico",
       minimumInputLength: 1,
@@ -28,11 +27,10 @@ $(document).ready(function(){
         if(p.image)  return "<div class='img-mask'> <img src='" + p.image  + "'/></div><span class='name'>"+ p.nickname+"</span>";
         return p.name;
       },
+      minimumInputLength: 3,
       dropdownCssClass: "bigdrop",
       escapeMarkup: function (m) { return m; }
     }).on("change", function(e){
       window.location = "/politicians/"+e.val;
     });
-  });
-
 });
