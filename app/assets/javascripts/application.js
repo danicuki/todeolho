@@ -9,7 +9,6 @@
 $(function() {
   $("#searchPolitician").select2({
       placeholder: "Busque por um politico",
-      minimumInputLength: 1,
       ajax: {
         url: "/politicians.json",
         dataType: 'json',
@@ -31,6 +30,6 @@ $(function() {
       dropdownCssClass: "bigdrop",
       escapeMarkup: function (m) { return m; }
     }).on("change", function(e){
-      window.location = "/politicians/"+e.val;
+      window.location = "/politicians/"+e.added.uri;
     });
 });
