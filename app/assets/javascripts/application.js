@@ -6,8 +6,8 @@
 //= require select2_locale_pt-BR
 //= require_tree .
 //
-$(document).ready(function(){
-    $("#searchPolitician").select2({
+$(function() {
+  $("#searchPolitician").select2({
       placeholder: "Busque por um politico",
       minimumInputLength: 1,
       ajax: {
