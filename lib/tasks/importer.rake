@@ -22,8 +22,10 @@ namespace :importer do
       p.past_jobs = politician.cargosPassados
       p.past_parties = politician.partidosPassados
 
+      uri = I18n.transliterate(politician.apelido).downcase.gsub(/\W/, "")
+      p.uri = uri
+
       begin
-        uri = I18n.transliterate(politician.apelido).downcase.gsub(/\W/, "")
         more_info_url = "http://camarabook-api.herokuapp.com/v1/parliamentarians/"+uri
         more_info = JSON.parse(Curl.get(more_info_url).body_str)
 
