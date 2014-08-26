@@ -22,7 +22,7 @@ gem 'font-awesome-rails'
 gem 'premailer-rails'
 gem 'nokogiri'
 gem 'unicorn'
-
+gem 'activeadmin', github: 'activeadmin'
 gem 'transparencia_brasil'
 
 group :development do
