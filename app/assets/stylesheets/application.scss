@@ -30,6 +30,14 @@ body {
   font-weight: 200;
 }
 
+header {
+  background-image: asset-url('firula.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+  width: 100%;
+  padding-top: 3px;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -43,14 +51,6 @@ footer {
 
 .container .text-muted {
   margin: 18px 0;
-}
-
-header {
-  background-image: asset-url('firula.png');
-  background-repeat: no-repeat;
-  background-position: left top;
-  width: 100%;
-  padding-top: 3px;
 }
 
 .navbar-default {
@@ -69,27 +69,6 @@ header {
   height: 43px;
 }
 
-/*.navbar {
-  height: 70px;
-  margin: 3px 0;
-  border-bottom: 1px solid $light-gray;
-  background-color: $white;
-  display: table;
-  width: 100%;
-}
-
-.navbar-brand img {
-  width: 45px;
-  height: 43px;
-  position: absolute;
-  top: 13px;
-}
-
-.navbar-default{
-  background-color: white;
-  border-color: white;
-}*/
-
 .dialog-box p {
   font-size: 14px;
   line-height: 1.5;
@@ -107,8 +86,6 @@ header {
   height: 126px;
   border-radius: 50%;
 }
-
-
 
 h2 {
   text-align: center;
@@ -375,10 +352,6 @@ display: block;
 .form-control.select2-container {
   border: none;
   box-shadow: none;
-}
-
-.navbar-form .form-control.select2-container {
-  left: 53px;
 }
 
 .form-control .select2-choice .select2-arrow {
