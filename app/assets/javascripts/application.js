@@ -8,7 +8,6 @@
 //
 
 $(function() {
-  
   $("#searchPolitician").select2({
     placeholder: "Busque por um politico",
     ajax: {
@@ -35,20 +34,10 @@ $(function() {
     window.location = "/politicians/"+e.added.uri;
   });
 
-  $('#notifications-button').click(function() {
+  $('.js__politicians-tab ul a').click(function(e) {
     $('.active').removeClass();
     $(this).closest('li').addClass('active');
-    $('#infos-section').hide();
-    $('#notifications-section').show();
-    return false;
+    $('#infos-section, #notifications-section').toggle();
+    e.preventDefault();
   });
-
-  $('#infos-button').click(function() {
-    $('.active').removeClass();
-    $(this).closest('li').addClass('active');
-    $('#notifications-section').hide();
-    $('#infos-section').show();
-    return false;
-  });
-
 });

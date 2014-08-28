@@ -53,27 +53,27 @@
 <div class="container">
   <div class="row">
     <div class="col-md-2"></div>
-    <div class="col-md-8">
+    <div class="col-md-8 js__politicians-tab">
       <ul class="nav nav-tabs nav-justified" role="tablist">
         <li class="active"><a href="#" id="notifications-button">NOTIFICAÇÕES</a></li>
         <li><a href="#" id="infos-button">INFOS</a></li>
       </ul>
       <div id="notifications-section">
         <div class="row">
-        <% @notifications.each do |notification| %>
-          <div class="col-md-6">
-            <div class="dialog">
-              <div class="thumb small-thumb dialog-img"><%= image_tag 'simbolo.png' %></div>
-              <div class="dialog-box">
-                <h4><%= notification.category %></h4>
-                <span><%= time_ago_in_words notification.created_at %></span>
-                <p><%= raw(notification.message) %></p>
+          <% @notifications.each do |notification| %>
+            <div class="col-md-6">
+              <div class="dialog">
+                <div class="thumb small-thumb dialog-img"><%= image_tag 'simbolo.png' %></div>
+                <div class="dialog-box">
+                  <h4><%= notification.category %></h4>
+                  <span><%= time_ago_in_words notification.created_at %></span>
+                  <p><%= raw(notification.message) %></p>
+                </div>
               </div>
             </div>
-         </div>
-         <% end %>
+          <% end %>
+        </div>
       </div>
-    </div>
       <div id="infos-section">
         <div class="row">
           <div class="col-md-4">
@@ -116,7 +116,7 @@
         </div>
         <div class="history">
           <h4>Hitórico de cargos</h4>
-        <p><%= @politician.job_title %></p>
+          <p><%= @politician.job_title %></p>
         </div>
       </div>
     </div>
