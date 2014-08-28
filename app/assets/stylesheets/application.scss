@@ -376,6 +376,11 @@ display: block;
   font-size: 38px;
 }
 
+.select2-container-active .select2-choice, .select2-container-active .select2-choices {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
 .select2-drop-active {
   border: none
 }
