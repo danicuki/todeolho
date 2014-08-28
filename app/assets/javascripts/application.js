@@ -9,7 +9,7 @@
 
 $(function() {
   
-  $("#searchPolitician").select2({
+  $(".search").select2({
     placeholder: "Busque por um politico",
     ajax: {
       url: "/politicians.json",

@@ -6,17 +6,7 @@
  *= require_self
  */
 
-/* Variables */
-$white:             #fff;
-$light-gray:        #ddd;
-
-$font-family:       'Roboto', sans-serif;
-$font-normal-size:  18px;
-
-$border-light-gray: 1px solid $light-gray;
-
-$navbar-height:     70px;
-$footer-height:     60px;
+@import "variables";
 
 html {
   position: relative;
@@ -25,18 +15,42 @@ html {
 
 body {
   margin-bottom: 60px;
-  font-family: $font-family;
+  font-family: $font-family-default;
   font-size: $font-normal-size;
   font-weight: 200;
 }
 
+/* header */
+
 header {
-  background-image: asset-url('firula.png');
-  background-repeat: no-repeat;
-  background-position: left top;
   width: 100%;
-  padding-top: 3px;
 }
+
+.firula {
+  width: 100%;
+  height: 4px;
+  
+  div {
+    width: 1px / 3px * 100%;
+    height: 100%;
+    float: left;
+    display: inline;
+  }
+}
+
+.yellow {
+  background-color: $yellow;
+}
+
+.green {
+  background-color: $green;
+}
+
+.blue {
+  background: $blue;
+}
+
+/* footer */
 
 footer {
   position: absolute;
@@ -51,6 +65,14 @@ footer {
 
 .container .text-muted {
   margin: 18px 0;
+}
+
+/* Body */
+
+a {
+  font-weight: lighter;
+  font-size: 12px;
+  color: $light-blue;
 }
 
 .navbar-default {
@@ -124,7 +146,7 @@ h3 {
   font-size: 20px;
 }
 
-.form-control {
+/*.form-control {
   display: block;
   width: 100%;
   height: 50px;
@@ -143,7 +165,7 @@ h3 {
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-}
+}*/
 
 .btn {
   border-radius: 0px;
@@ -441,7 +463,7 @@ li.select2-result {
 }
 
 
-.form-control.form-control {
+/*.form-control.form-control {
   color:  #3DB1FF;
   width: 100%;
 }
@@ -449,4 +471,4 @@ li.select2-result {
 .form-control.form-control:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
-}
+}*/
