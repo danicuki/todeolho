@@ -3,7 +3,8 @@
 #home {
   background-image: url(BG.jpg);
   background-size: cover;
-  background-position: -315px 20px;
+  background-position: -306px 0px;
+  background-repeat: no-repeat;
   padding-top: 100px;
   text-align: center;
   color: $gray;
@@ -14,9 +15,8 @@
 }
 
 #home-welcome {
-	font-family: $font-family-title;
-	font-size: 42px;
 	margin-bottom: 50px;
+	margin-top: 0;
 
 	span, strong {
 		display: block;

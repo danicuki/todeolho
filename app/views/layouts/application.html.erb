@@ -38,13 +38,16 @@
   </head>
   <body>
     <header>
+
+      <%= yield :header %>
+
       <div class="firula">
         <div class="yellow"></div>  
         <div class="green"></div>
         <div class="blue"></div>
       </div>
       
-      <%= yield :header %>
+      <%= render "layouts/search_bar" %>
 
     </header>
     
