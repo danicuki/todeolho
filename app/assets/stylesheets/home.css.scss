@@ -7,7 +7,6 @@
   background-repeat: no-repeat;
   padding-top: 100px;
   text-align: center;
-  color: $gray;
 }
 
 #home-logo {
@@ -33,7 +32,6 @@
 	border: 1px solid #CFCFCF;
 	border-radius: 0;
 	text-align: center;
-	font-family: $font-family-title;
 	font-size: 26px;
 	color: #BABABA;
 	margin-bottom: 75px;
@@ -62,3 +60,53 @@
 	font-weight: 100;
 	font-size: 48px;
 }
+
+.resume {
+	text-align: center;
+	margin-bottom: 75px;
+}
+
+.row {
+	margin-bottom: 50px;
+}
+
+h3.yellow {
+	background: transparent;
+	color: $yellow;
+}
+
+h3.green {
+	background: transparent;
+	color: $green;
+}
+
+h3.blue {
+	background: transparent;
+	color: $blue;
+}
+
+.img-inf {
+	width: 220px;
+}
+
+.text-inf p {
+	font-size: $font-small-size;
+}
+
+.arrow-space {
+	position: relative;
+	height: 139px;
+
+	.arrow-right {
+		position: absolute;
+		right: 25%;
+		top: -20px;
+	}
+
+	.arrow-left {
+		position: absolute;
+		left: 25%;
+		top: -20px;
+	}
+}
+
