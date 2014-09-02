@@ -1,24 +1,26 @@
 
 <%= render partial: "shared/flash_messages", flash: flash %>
 
-<div class="jumbotron">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
-        <%= image_tag "logo.png", width: "271", height: "101", id: "home-logo" %>
-        <p id="home-text">Aqui você pode saber mais sobre seu político preferido e acompanha suas movimentações em seu gabinete.</p>
-        <form role="form" id="form-search">
-          <div class="form-group">
-            <label class="sr-only" for="searchPolitician"></label>
-            <div class="col-sm-12">
-              <input type="text" id="searchPolitician" class="form-control" style="text-align: left;">
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="col-md-2"></div>
-    </div>
+<% content_for :header do %>
+  <div class="firula">
+    <div class="yellow"></div>  
+    <div class="green"></div>
+    <div class="blue"></div>
   </div>
-</div>
+  <section id="home">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <%= image_tag "logo_todeolho.svg", id: "home-logo" %>
+          <h2 id="home-welcome"><span>Seja bem-vindo ao</span><strong>Tô de Olho</strong></h2>
+          <p id="home-text">Aqui você pode saber mais sobre seu político preferido e acompanha suas movimentações em seu gabinete.</p>
+          <input type="text" id="home-search" class="form-control" placeholder="Busque por um político">  
+          <a href="#" id="home-next-content"><span>ENTENDA COMO FUNCIONA</span></a>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+</section>
+<% end %>
 
